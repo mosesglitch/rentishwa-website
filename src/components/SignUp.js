@@ -98,45 +98,9 @@ const SignUp = ({
             <form>
               <div className="form-group">
                 <div className="mt-4">
-                  {renderInputField(
-                    "firstName",
-                    "Full name / Business name",
-                    "text"
-                  )}
-                  <div
-                    className={`float-label-field ${
-                      phoneContact?.length > 0 || phoneFocus
-                        ? "float focus"
-                        : ""
-                    }`}
-                  >
-                    <fieldset className="float-label-field-contact">
-                      <label
-                        htmlFor="contact"
-                        onClick={() => setphoneFocus(true)}
-                      >
-                        Phone number
-                      </label>
+                  {renderInputField("firstName", "Full name ", "text")}
+                  {renderInputField("email", "Email", "text")}
 
-                      <PhoneInput
-                        className="w-100 "
-                        id="contact"
-                        defaultCountry={countryIp?.toUpperCase() || "KE"}
-                        value={phoneContact}
-                        onChange={(phone) => {
-                          setPhoneContact(phone);
-                        }}
-                        onFocus={() => setphoneFocus(true)}
-                        onBlur={() => setphoneFocus(false)}
-                      />
-
-                      {isnotvalidPhoneNumber && (
-                        <div className="text-danger">
-                          Invalid phone number format.
-                        </div>
-                      )}
-                    </fieldset>
-                  </div>
                   {renderInputField("password", "Password", type)}
                   {renderInputField(
                     "confirmPassword",

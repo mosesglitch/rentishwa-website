@@ -1,6 +1,25 @@
-import { MDBBtn } from "mdb-react-ui-kit";
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
+  MDBDropdownItem,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBtn,
+  MDBCollapse,
+} from "mdb-react-ui-kit";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 function Contact() {
+  const options = ["Booking", "Enquiry", "Notification"];
+  const defaultOption = options[0];
   return (
     <div className="container contact">
       <div className="ContactForm">
@@ -37,15 +56,14 @@ function Contact() {
                   </div>
                   {/* Row 2 of form */}
 
-                  <div className="col">
-                    <input
-                      type="text"
-                      name="subject"
-                      className="form-control formInput"
-                      placeholder="Subject"
-                    ></input>
+                  <div className="w-100">
+                    <Dropdown
+                      options={options}
+                      // onChange={onSelect}
+                      value={defaultOption}
+                      placeholder="Select an option"
+                    />
                   </div>
-
                   {/* Row 3 of form */}
 
                   <div className="col my-3">

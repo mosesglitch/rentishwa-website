@@ -19,12 +19,12 @@ export const SidebarData = [
   //   icon: <FaUser />,
   //   cName: "nav-text",
   // },
-  // {
-  //   title: "About",
-  //   path: "/about",
-  //   icon: <FaEdit />,
-  //   cName: "nav-text",
-  // },
+  {
+    title: "About",
+    path: "/about",
+    icon: <FaEdit />,
+    cName: "nav-text",
+  },
 
   {
     title: "Contact",

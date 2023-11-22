@@ -83,18 +83,26 @@ function Login() {
       <MDBTabsContent>
         <MDBTabsPane show={justifyActive === 1} className="multipanel ">
           <form className="mt-3">
-            <div className={`float-label-field ${1 > 2 ? "float focus" : ""}`}>
-              <fieldset className="float-label-field-contact">
-                <label htmlFor="contact">Phone number</label>
-
-                <PhoneInput
-                  className="w-100 "
-                  id="contact"
-                  value={phoneContact}
-                  onChange={(phone) => {
-                    setPhoneContact(phone);
+            <div className={`float-label-field `}>
+              <fieldset className="float-label-field">
+                <label
+                  htmlFor="pass1"
+                  // onClick={() => setpasswordFocus(true)}
+                >
+                  Email
+                </label>
+                <input name="email" label="text" id="pass1" className="" />
+                <span
+                  class="flex justify-around items-center"
+                  style={{
+                    position: "absolute",
+                    top: "5px",
+                    right: "9px",
+                    marginLeft: "3px",
                   }}
-                />
+                >
+                  {/* <Icon class=" mr-10" size={15} className="text-muted" /> */}
+                </span>
               </fieldset>
             </div>
 

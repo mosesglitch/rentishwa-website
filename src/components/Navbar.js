@@ -78,37 +78,7 @@ function NavBar() {
                 </li>
               );
             })}
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle
-                  tag="a"
-                  className="nav-link text-dark"
-                  role="button"
-                  onClick={() => {
-                    navigate(`/about`);
-                    // handleShowNavbar();
-                  }}
-                >
-                  About
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  {["Booking", "Enquiry", "Notification"].map((house) => (
-                    <>
-                      <MDBDropdownItem
-                        onClick={() => {
-                          navigate(`/about`);
-                          handleShowNavbar();
-                        }}
-                        className="ml-2"
-                        style={{ fontSize: "16px" }}
-                      >
-                        {house}
-                      </MDBDropdownItem>
-                    </>
-                  ))}
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
+
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle
